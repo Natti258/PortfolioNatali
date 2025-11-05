@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfolio — Главная</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html" data-i18n="nav.home">Главная</a>
+      <a href="about.html" data-i18n="nav.about">О мне</a>
+      <a href="work.html" data-i18n="nav.work">Портфолио</a>
+      <a href="contact.html" data-i18n="nav.contact">Контакты</a>
+    </nav>
+    <div class="lang-switch">
+      <button data-lang="ru">RU</button>
+      <button data-lang="en">EN</button>
+      <button data-lang="de">DE</button>
+    </div>
+  </header>
+
+  <main>
+    <h1 data-i18n="home.title">Привет — я дизайнер/разработчик</h1>
+    <p data-i18n="home.lead">Добро пожаловать в моё портфолио.</p>
+    <!-- Примеры проектов -->
+    <section id="projects"></section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Мой Портфолио</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/language.js"></script>
+</body>
+</html>

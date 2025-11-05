@@ -1,0 +1,4 @@
+@media (max-width:600px){
+  header{flex-direction:column;align-items:flex-start}
+  nav{margin-bottom:.5rem}
+}
