@@ -1,39 +1,32 @@
-<!doctype html>
-<html lang="ru">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Portfolio — Главная</title>
-  <link rel="stylesheet" href="css/main.css" />
-  <link rel="stylesheet" href="css/responsive.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Natali Skirdova</title>
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="index.html" data-i18n="nav.home">Главная</a>
-      <a href="about.html" data-i18n="nav.about">О мне</a>
-      <a href="work.html" data-i18n="nav.work">Портфолио</a>
-      <a href="contact.html" data-i18n="nav.contact">Контакты</a>
-    </nav>
-    <div class="lang-switch">
-      <button data-lang="ru">RU</button>
-      <button data-lang="en">EN</button>
-      <button data-lang="de">DE</button>
-    </div>
-  </header>
+    <header class="header">
+        <!-- Same header -->
+    </header>
 
-  <main>
-    <h1 data-i18n="home.title">Привет — я дизайнер/разработчик</h1>
-    <p data-i18n="home.lead">Добро пожаловать в моё портфолио.</p>
-    <!-- Примеры проектов -->
-    <section id="projects"></section>
-  </main>
+    <section class="portfolio-section">
+        <h1 data-i18n="portfolio_title">My Portfolio</h1>
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="web">Web Design</button>
+            <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+            <button class="filter-btn" data-filter="branding">Branding</button>
+        </div>
+        
+        <div class="portfolio-grid" id="portfolioGrid">
+            <!-- Projects will be loaded here -->
+        </div>
+    </section>
 
-  <footer>
-    <p>&copy; <span id="year"></span> Мой Портфолио</p>
-  </footer>
-
-  <script src="js/main.js"></script>
-  <script src="js/language.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/carousel.js"></script>
+    <script src="js/language.js"></script>
 </body>
 </html>

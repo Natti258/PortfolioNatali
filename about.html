@@ -1,39 +1,41 @@
-<!doctype html>
-<html lang="ru">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Portfolio — Главная</title>
-  <link rel="stylesheet" href="css/main.css" />
-  <link rel="stylesheet" href="css/responsive.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Natali Skirdova</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="index.html" data-i18n="nav.home">Главная</a>
-      <a href="about.html" data-i18n="nav.about">О мне</a>
-      <a href="work.html" data-i18n="nav.work">Портфолио</a>
-      <a href="contact.html" data-i18n="nav.contact">Контакты</a>
-    </nav>
-    <div class="lang-switch">
-      <button data-lang="ru">RU</button>
-      <button data-lang="en">EN</button>
-      <button data-lang="de">DE</button>
-    </div>
-  </header>
+    <header class="header">
+        <!-- Same header as index.html -->
+    </header>
 
-  <main>
-    <h1 data-i18n="home.title">Привет — я дизайнер/разработчик</h1>
-    <p data-i18n="home.lead">Добро пожаловать в моё портфолио.</p>
-    <!-- Примеры проектов -->
-    <section id="projects"></section>
-  </main>
+    <section class="about-hero">
+        <div class="about-content">
+            <div class="about-image">
+                <img src="images/about/profile.jpg" alt="Natali Skirdova">
+            </div>
+            <div class="about-text">
+                <h1 data-i18n="about_title">Hi, I'm Natali</h1>
+                <p data-i18n="about_description">UX/UI and graphic designer with over 5 years of experience...</p>
+                
+                <div class="stats">
+                    <div class="stat-item">
+                        <h3>20+</h3>
+                        <p data-i18n="projects_completed">Projects Completed</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>5+</h3>
+                        <p data-i18n="years_experience">Years Experience</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <footer>
-    <p>&copy; <span id="year"></span> Мой Портфолио</p>
-  </footer>
-
-  <script src="js/main.js"></script>
-  <script src="js/language.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/language.js"></script>
 </body>
 </html>

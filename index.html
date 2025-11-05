@@ -1,39 +1,66 @@
-<!doctype html>
-<html lang="ru">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Portfolio — Главная</title>
-  <link rel="stylesheet" href="css/main.css" />
-  <link rel="stylesheet" href="css/responsive.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natali Skirdova - Creative Designer</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-  <header>
-    <nav>
-      <a href="index.html" data-i18n="nav.home">Главная</a>
-      <a href="about.html" data-i18n="nav.about">О мне</a>
-      <a href="work.html" data-i18n="nav.work">Портфолио</a>
-      <a href="contact.html" data-i18n="nav.contact">Контакты</a>
-    </nav>
-    <div class="lang-switch">
-      <button data-lang="ru">RU</button>
-      <button data-lang="en">EN</button>
-      <button data-lang="de">DE</button>
+    <!-- Header -->
+    <header class="header">
+        <nav class="nav-container">
+            <div class="logo">NATALI</div>
+            <ul class="nav-links">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="work.html">WORK</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="contact.html">CONTACT</a></li>
+                <li><button id="languageToggle">EN</button></li>
+            </ul>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero glass-effect">
+        <div class="hero-content">
+            <h1 class="gradient-text" data-i18n="hero_title">CREATIVE DESIGNER</h1>
+            <p data-i18n="hero_subtitle">I create design that speaks without words</p>
+            <button class="btn btn-primary" data-i18n="contact_me">CONTACT ME</button>
+        </div>
+    </section>
+
+    <!-- Running Text -->
+    <div class="running-text">
+        <div class="marquee">
+            <span data-i18n="running_text">DESIGN THAT THINKS, FEELS, AND HELPS • CREATIVE SOLUTIONS • UX/UI DESIGN •</span>
+        </div>
     </div>
-  </header>
 
-  <main>
-    <h1 data-i18n="home.title">Привет — я дизайнер/разработчик</h1>
-    <p data-i18n="home.lead">Добро пожаловать в моё портфолио.</p>
-    <!-- Примеры проектов -->
-    <section id="projects"></section>
-  </main>
+    <!-- Featured Work -->
+    <section class="featured-work">
+        <h2 data-i18n="featured_work">Featured Work</h2>
+        <div class="work-grid">
+            <div class="work-item">
+                <img src="images/projects/project1.jpg" alt="Project 1">
+                <div class="work-overlay">
+                    <h3>Web Design</h3>
+                    <a href="project-detail.html?project=1" class="btn-view">View Project</a>
+                </div>
+            </div>
+            <!-- Add more work items -->
+        </div>
+    </section>
 
-  <footer>
-    <p>&copy; <span id="year"></span> Мой Портфолио</p>
-  </footer>
-
-  <script src="js/main.js"></script>
-  <script src="js/language.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/language.js"></script>
+    <script src="js/animations.js"></script>
 </body>
 </html>
