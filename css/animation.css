@@ -1,8 +1,52 @@
-:root{--bg:#fff;--text:#111;--accent:#0a74da}
-*{box-sizing:border-box}
-body{font-family:Inter,system-ui,Arial, sans-serif;background:var(--bg);color:var(--text);margin:0;line-height:1.5}
-header{display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem;border-bottom:1px solid #eee}
-nav a{margin-right:1rem;text-decoration:none;color:inherit}
-.lang-switch button{margin-left:.5rem}
-main{padding:2rem}
-footer{padding:1rem 2rem;border-top:1px solid #eee;text-align:center;font-size:.9rem}
+
+/* Gradient Text Animation */
+.gradient-text {
+    background: linear-gradient(45deg, #ff6b6b, #ee5a24, #ff9ff3, #f368e0);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientShift 8s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Glass Effect */
+.glass-effect {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+}
+
+/* Running Text */
+.running-text {
+    background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+    padding: 1rem 0;
+    overflow: hidden;
+}
+
+.marquee {
+    display: inline-block;
+    animation: marquee 20s linear infinite;
+    color: white;
+    font-weight: bold;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Card Hover Effects */
+.portfolio-card {
+    transition: all 0.3s;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
