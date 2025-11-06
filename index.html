@@ -1,66 +1,402 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- ========== МЕТА ТЕГИ ========== -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Natali Skirdova - UX/UI Designer & Media Designer based in Switzerland">
     <title>Natali Skirdova - Creative Designer</title>
+    
+    <!-- ========== ПОДКЛЮЧЕНИЕ CSS ========== -->
+    <!-- Основные стили -->
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/animations.css">
+    <!-- Анимации -->
+    <link rel="stylesheet" href="css/animation.css">
+    <!-- Адаптивность -->
     <link rel="stylesheet" href="css/responsive.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- ========== ШРИФТЫ ========== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="nav-container">
-            <div class="logo">NATALI</div>
-            <ul class="nav-links">
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="about.html">ABOUT</a></li>
-                <li><a href="work.html">WORK</a></li>
-                <li><a href="faq.html">FAQ</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
-                <li><button id="languageToggle">EN</button></li>
-            </ul>
-            <div class="mobile-menu">
-                <i class="fas fa-bars"></i>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero glass-effect">
-        <div class="hero-content">
-            <h1 class="gradient-text" data-i18n="hero_title">CREATIVE DESIGNER</h1>
-            <p data-i18n="hero_subtitle">I create design that speaks without words</p>
-            <button class="btn btn-primary" data-i18n="contact_me">CONTACT ME</button>
+    
+    <!-- ========================================
+         НАВИГАЦИЯ (NAVIGATION)
+         Фиксированная шапка сайта
+    ========================================= -->
+    <nav class="main-nav">
+        <!-- Логотип слева -->
+        <div class="logo">
+            <a href="index.html">N</a>
         </div>
+        
+        <!-- Меню по центру -->
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">HOME</a></li>
+            <li><a href="about.html">ABOUT ME</a></li>
+            <li><a href="work.html">WORK</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">CONTACT</a></li>
+        </ul>
+        
+        <!-- Переключатель языка и кнопка -->
+        <div class="nav-right">
+            <div class="language-switcher">
+                <button class="lang-btn active" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="de">DE</button>
+                <button class="lang-btn" data-lang="ru">RU</button>
+            </div>
+            <a href="contact.html" class="btn-contact">CONTACT ME</a>
+        </div>
+    </nav>
+
+    <!-- ========================================
+         HERO СЕКЦИЯ
+         Главный экран с большим заголовком
+    ========================================= -->
+    <section class="hero">
+        <div class="hero-content">
+            <!-- Большой заголовок -->
+            <h1 class="hero-title">
+                <span class="title-line">CREATIVE</span>
+                <span class="title-line">DESIGNER</span>
+            </h1>
+            
+            <!-- Подзаголовок -->
+            <p class="hero-subtitle" data-translate="hero.subtitle">
+                A Swiss designer that creates unified works
+            </p>
+            
+            <!-- Социальные ссылки -->
+            <div class="social-links">
+                <a href="https://linkedin.com" target="_blank" class="social-link">
+                    LINKEDIN
+                </a>
+                <a href="https://behance.net" target="_blank" class="social-link">
+                    BEHANCE
+                </a>
+                <a href="https://notion.so" target="_blank" class="social-link">
+                    NOTION
+                </a>
+            </div>
+        </div>
+        
+        <!-- Кнопка с hover градиентом -->
+        <a href="about.html" class="hero-cta">
+            <span data-translate="hero.cta">Hi, I'm Natali</span>
+        </a>
     </section>
 
-    <!-- Running Text -->
-    <div class="running-text">
+    <!-- ========================================
+         БЕГУЩАЯ СТРОКА (MARQUEE)
+         Текст в красном блоке
+    ========================================= -->
+    <div class="marquee-section">
         <div class="marquee">
-            <span data-i18n="running_text">DESIGN THAT THINKS, FEELS, AND HELPS • CREATIVE SOLUTIONS • UX/UI DESIGN •</span>
+            <div class="marquee-content">
+                <span>Design that brings ideas to life and connects people to their goals.</span>
+                <span>•</span>
+                <span>Design that brings ideas to life and connects people to their goals.</span>
+                <span>•</span>
+                <span>Design that brings ideas to life and connects people to their goals.</span>
+                <span>•</span>
+            </div>
         </div>
     </div>
 
-    <!-- Featured Work -->
-    <section class="featured-work">
-        <h2 data-i18n="featured_work">Featured Work</h2>
-        <div class="work-grid">
-            <div class="work-item">
-                <img src="images/projects/project1.jpg" alt="Project 1">
-                <div class="work-overlay">
-                    <h3>Web Design</h3>
-                    <a href="project-detail.html?project=1" class="btn-view">View Project</a>
+    <!-- ========================================
+         INTRO СЕКЦИЯ
+         "Hi, I'm Natali" с фото
+    ========================================= -->
+    <section class="intro-section">
+        <div class="container">
+            <div class="intro-grid">
+                <!-- Левая часть: Фото -->
+                <div class="intro-image">
+                    <img src="images/natali-photo.jpg" alt="Natali Skirdova">
+                </div>
+                
+                <!-- Правая часть: Текст -->
+                <div class="intro-text">
+                    <h2 class="intro-title">
+                        HI, I'M NATALI
+                        <span class="subtitle">UX/UI DESIGNER</span>
+                    </h2>
+                    
+                    <p data-translate="intro.text1">
+                        I'm a Swiss-based designer who creates unified works of art by combining strategy, aesthetics, and functionality.
+                    </p>
+                    
+                    <p data-translate="intro.text2">
+                        With 4+ years of experience in digital and print design, I help businesses and social projects communicate their message effectively.
+                    </p>
+                    
+                    <a href="about.html" class="btn-secondary">
+                        <span data-translate="intro.cta">READ MORE</span>
+                    </a>
                 </div>
             </div>
-            <!-- Add more work items -->
         </div>
     </section>
 
+    <!-- ========================================
+         СТАТИСТИКА (STATS)
+         Карточки с цифрами
+    ========================================= -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3 class="stat-number">4+</h3>
+                    <p class="stat-label" data-translate="stats.years">YEARS IN METRO</p>
+                </div>
+                
+                <div class="stat-card">
+                    <h3 class="stat-number">20+</h3>
+                    <p class="stat-label" data-translate="stats.projects">COMPLETED PROJECTS</p>
+                </div>
+                
+                <div class="stat-card highlight">
+                    <h3 class="stat-title">GLOBAL EXPERIENCE</h3>
+                    <p class="stat-text" data-translate="stats.global">
+                        Working with clients across Europe and international markets
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         ЧТО Я СОЗДАЮ (WHAT I CREATE)
+         Список услуг/направлений
+    ========================================= -->
+    <section class="services-section">
+        <div class="container">
+            <h2 class="section-title" data-translate="services.title">
+                WHAT I CREATE:
+            </h2>
+            
+            <div class="services-grid">
+                <div class="service-item">
+                    <h3>UX/UI design</h3>
+                    <p data-translate="services.ux">User research, wireframing, prototyping</p>
+                </div>
+                
+                <div class="service-item">
+                    <h3>Graphic services</h3>
+                    <p data-translate="services.graphic">Visual identity and branding</p>
+                </div>
+                
+                <div class="service-item">
+                    <h3>Web & mobile</h3>
+                    <p data-translate="services.web">Responsive websites and apps</p>
+                </div>
+                
+                <div class="service-item">
+                    <h3>Product Design</h3>
+                    <p data-translate="services.product">End-to-end product design</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         ПОРТФОЛИО (PORTFOLIO PREVIEW)
+         2 карточки: Web/Digital и Graphic Design
+         С blur эффектом при hover
+    ========================================= -->
+    <section class="portfolio-preview">
+        <div class="container-full">
+            <h2 class="section-title-center" data-translate="portfolio.title">
+                PORTFOLIO:
+            </h2>
+            
+            <div class="portfolio-cards">
+                <!-- Карточка 1: Web & Digital Design -->
+                <a href="work.html" class="portfolio-card" data-category="web">
+                    <div class="card-blur"></div>
+                    <div class="card-content">
+                        <span class="card-label">WEB & DIGITAL DESIGN</span>
+                        <h3 class="card-title">
+                            UX/UI designer<br>
+                            Digital media
+                        </h3>
+                        <p class="card-description" data-translate="portfolio.web">
+                            Creating intuitive digital experiences through user-centered design
+                        </p>
+                    </div>
+                    <div class="card-image">
+                        <img src="images/portfolio-web.jpg" alt="Web Design">
+                    </div>
+                </a>
+                
+                <!-- Карточка 2: Graphic & Print Design -->
+                <a href="work.html?category=graphic" class="portfolio-card" data-category="graphic">
+                    <div class="card-blur"></div>
+                    <div class="card-content">
+                        <span class="card-label">GRAPHIC & PRINT DESIGN</span>
+                        <h3 class="card-title">
+                            Visual identity<br>
+                            Brand design
+                        </h3>
+                        <p class="card-description" data-translate="portfolio.graphic">
+                            Crafting memorable brand identities and print materials
+                        </p>
+                    </div>
+                    <div class="card-image">
+                        <img src="images/portfolio-graphic.jpg" alt="Graphic Design">
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         КРАСИВАЯ СЕКЦИЯ С BLUR
+         "Design for you and your business"
+    ========================================= -->
+    <section class="design-statement">
+        <div class="blur-text">
+            <h2 class="blur-title">
+                DESIGN<br>
+                FOR YOU<br>
+                AND<br>
+                YOUR BUSINESS
+            </h2>
+        </div>
+        <a href="contact.html" class="btn-primary">
+            <span data-translate="cta.contact">CONTACT</span>
+        </a>
+    </section>
+
+    <!-- ========================================
+         FAQ PREVIEW
+         Несколько вопросов для главной
+    ========================================= -->
+    <section class="faq-preview">
+        <div class="container">
+            <h2 class="section-title" data-translate="faq.title">FAQ</h2>
+            
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span data-translate="faq.q1">What services do you offer?</span>
+                        <span class="faq-icon">→</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-translate="faq.a1">
+                            I specialize in UX/UI design, web design, graphic design, and brand identity. From concept to implementation.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span data-translate="faq.q2">Where are you based?</span>
+                        <span class="faq-icon">→</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-translate="faq.a2">
+                            I'm based in Rapperswil, Switzerland, but work with clients globally.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span data-translate="faq.q3">How do you typically work with clients?</span>
+                        <span class="faq-icon">→</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p data-translate="faq.a3">
+                            I follow a collaborative process: research, strategy, design, testing, and delivery.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <a href="faq.html" class="btn-view-all">
+                <span data-translate="faq.viewAll">VIEW ALL</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- ========================================
+         КОНТАКТ ФОРМА PREVIEW
+         Краткая версия для главной
+    ========================================= -->
+    <section class="contact-preview">
+        <div class="container">
+            <h2 class="section-title-center" data-translate="contact.title">
+                GET IN TOUCH
+            </h2>
+            
+            <div class="contact-grid">
+                <!-- Левая часть: Контакты -->
+                <div class="contact-info">
+                    <a href="mailto:designenatali@gmail.com" class="contact-item">
+                        <span class="icon">✉</span>
+                        <span>designenatali@gmail.com</span>
+                    </a>
+                    
+                    <a href="tel:+4176507559" class="contact-item">
+                        <span class="icon">☎</span>
+                        <span>+41765075592</span>
+                    </a>
+                    
+                    <div class="contact-item">
+                        <span class="icon">📍</span>
+                        <span>Rapperswil SG, Switzerland</span>
+                    </div>
+                </div>
+                
+                <!-- Правая часть: Форма -->
+                <div class="contact-form-preview">
+                    <a href="contact.html" class="btn-primary btn-full">
+                        <span data-translate="contact.openForm">OPEN CONTACT FORM</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================
+         ФУТЕР (FOOTER)
+         Социальные ссылки и копирайт
+    ========================================= -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-social">
+                <a href="https://linkedin.com" target="_blank">LINKEDIN</a>
+                <a href="https://behance.net" target="_blank">BEHANCE</a>
+                <a href="https://notion.so" target="_blank">NOTION</a>
+            </div>
+            
+            <div class="footer-logo">
+                <span>N</span>
+                <span class="footer-name">NATALI SKIRDOVA</span>
+            </div>
+            
+            <nav class="footer-nav">
+                <a href="about.html">ABOUT ME</a>
+                <a href="work.html">PORTFOLIO</a>
+                <a href="faq.html">FAQ</a>
+                <a href="contact.html">CONTACT</a>
+            </nav>
+            
+            <p class="footer-copyright">
+                © 2025. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- ========================================
+         ПОДКЛЮЧЕНИЕ JAVASCRIPT
+         Загружается в конце для быстрой загрузки
+    ========================================= -->
     <script src="js/main.js"></script>
-    <script src="js/language.js"></script>
-    <script src="js/animations.js"></script>
+    <script src="js/carousel.js"></script>
+    
 </body>
 </html>
